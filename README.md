@@ -1,1 +1,1 @@
-# web-scraping
+# Im practicing my web-scraping skill in this repository, so this will have a lot independent file
