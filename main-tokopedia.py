@@ -26,11 +26,12 @@ if respons.status_code == 200:
 else:
     print("Request Failed : ", respons.status_code)
 
+soup = BeautifulSoup(respons.content, 'html.parser')
+items = soup.findAll('div', 'css-1asz3by')
+
 
 # BeautifulSoup
 def get_items():
-    soup = BeautifulSoup(respons.content, 'html.parser')
-    items = soup.find_all('div', 'css-1asz3by')
     i = 0
     for item in items:
         name = item.find('div', 'prd_link-product-name')
@@ -38,8 +39,9 @@ def get_items():
 
 
 def get_price():
-    soup = BeautifulSoup(respons.content, 'html.parser')
-    items = soup.find_all('div', 'css-1asz3by')
+    # soup = BeautifulSoup(respons.content, 'html.parser')
+    # items = soup.findAll('div', 'css-llwpbs')
+    # items = soup.findAll("div", attrs={"data-testid": "divSRPContentProducts"})
     i = 0
     for item in items:
         price = item.find('div', 'prd_link-product-price')
