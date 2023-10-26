@@ -1,5 +1,4 @@
 import requests
-import os
 from bs4 import BeautifulSoup
 
 url = requests.get('https://www.detik.com/terpopuler')
